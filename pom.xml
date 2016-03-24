@@ -14,6 +14,7 @@
 		<!-- main version setting -->
 		<spring.version>4.0.8.RELEASE</spring.version>
 		<sitemesh.version>2.4.2</sitemesh.version>
+		<hibernate-validator>5.2.4.Final</hibernate-validator>
 		
 		<jackson.version>2.4.0</jackson.version>
 		
@@ -105,6 +106,14 @@
 			<version>1.2</version>
 			<type>jar</type>
 		</dependency>
+		
+		<!-- Validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate-validator}</version>
+	  	</dependency>
+		
 		
 		<!-- JSON begin -->
 		<dependency>
