@@ -4,6 +4,7 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -11,6 +12,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ValidationController {
 
 	// enforcement of constraints on the JavaBean arg require a JSR-303 provider on the classpath
+	
+	@RequestMapping("/validHome")
+	public String validHome(){
+		
+		return "validate";
+		
+	}
 	
 	@RequestMapping("/validate")
 	public @ResponseBody String validate(@Valid JavaBean bean, BindingResult result) {
@@ -20,5 +28,6 @@ public class ValidationController {
 			return "No errors";
 		}
 	}
+
 
 }
