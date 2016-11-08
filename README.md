@@ -1,1 +1,3 @@
 # easyPlat
+
+IDEA UPDATE
